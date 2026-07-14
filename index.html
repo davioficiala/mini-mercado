@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -7,86 +8,256 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🛒 Mini Mercado</title>
+<title>💰 SmartMoney</title>
+
+<meta name="theme-color" content="#2ecc71">
 
 <link rel="manifest" href="manifest.json">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 
-<meta name="theme-color" content="#2ecc71">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="topo">
 
-<h1>🛒 Mini Mercado</h1>
+<button class="menu">
 
-<input
-id="pesquisa"
-type="text"
-placeholder="Pesquisar produto...">
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+<h1>Smart<span>Money</span></h1>
+
+<button class="perfil">
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
 
 </header>
 
 <main>
 
-<div class="form">
+<section class="mostrarSaldo">
 
-<input
-id="produto"
-type="text"
-placeholder="Produto">
+<button id="btnSaldo">
 
-<input
-id="preco"
-type="number"
-placeholder="Preço">
+<i class="fa-solid fa-eye"></i>
 
-<button onclick="adicionarProduto()">
+Mostrar saldos
 
-Adicionar
+</button>
+
+</section>
+
+<section class="mascote">
+
+<img src="assets/mascot/mascote.png" alt="Mascote">
+
+<div class="mensagem">
+
+<h2>Olá!</h2>
+
+<p>Seu dinheiro organizado gera mais tranquilidade.</p>
+
+</div>
+
+</section>
+
+<section class="cards">
+
+<div class="card gastos">
+
+<div class="icone">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</div>
+
+<h3>Gastos</h3>
+
+<p class="valor" id="gastos">
+
+R$ •••••
+
+</p>
+
+<button class="olho">
+
+<i class="fa-solid fa-eye"></i>
 
 </button>
 
 </div>
 
-<div id="lista"></div>
+<div class="card reserva">
 
-<h2>
+<div class="icone">
 
-Total
+<i class="fa-solid fa-shield-heart"></i>
 
-<span id="total">
+</div>
+
+<h3>Reserva</h3>
+
+<p class="valor" id="reserva">
+
+R$ •••••
+
+</p>
+
+<button class="olho">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+</div>
+
+<div class="card investimentos">
+
+<div class="icone">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+<h3>Investimentos</h3>
+
+<p class="valor" id="investimentos">
+
+R$ •••••
+
+</p>
+
+<button class="olho">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+</div>
+
+</section>
+
+<section class="entrada">
+
+<div>
+
+<p>Entrada Total</p>
+
+<h2 id="entrada">
 
 R$ 0,00
 
-</span>
+</h2>
+
+</div>
+
+<button id="novaEntrada">
+
++ Nova Entrada
+
+</button>
+
+</section>
+
+<section class="smartIA">
+
+<div>
+
+<h3>🤖 Smart IA</h3>
+
+<p>
+
+Você ainda não possui movimentações.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="historico">
+
+<h2>
+
+Últimas movimentações
 
 </h2>
 
+<div id="listaHistorico">
+
+</div>
+
+</section>
+
 </main>
 
-<script src="script.js"></script>
+<nav class="menuBottom">
+
+<a href="#">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Início</span>
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-chart-simple"></i>
+
+<span>Relatórios</span>
+
+</a>
+
+<button id="scanner">
+
+<i class="fa-solid fa-barcode"></i>
+
+</button>
+
+<a href="#">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>Compras</span>
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Ajustes</span>
+
+</a>
+
+</nav>
+
+<script src="js/app.js"></script>
 
 <script>
 
-if("serviceWorker" in navigator){
+if ("serviceWorker" in navigator){
 
 navigator.serviceWorker.register("service-worker.js");
 
 }
 
-
-
-
 </script>
 
-
-
-
-  
 </body>
 
 </html>
