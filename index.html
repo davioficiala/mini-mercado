@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🛒 Mini Mercado</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="stylesheet" href="style.css">
+
+<meta name="theme-color" content="#2ecc71">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🛒 Mini Mercado</h1>
+
+<input
+id="pesquisa"
+type="text"
+placeholder="Pesquisar produto...">
+
+</header>
+
+<main>
+
+<div class="form">
+
+<input
+id="produto"
+type="text"
+placeholder="Produto">
+
+<input
+id="preco"
+type="number"
+placeholder="Preço">
+
+<button onclick="adicionarProduto()">
+
+Adicionar
+
+</button>
+
+</div>
+
+<div id="lista"></div>
+
+<h2>
+
+Total
+
+<span id="total">
+
+R$ 0,00
+
+</span>
+
+</h2>
+
+</main>
+
+<script src="script.js"></script>
+
+<script>
+
+if("serviceWorker" in navigator){
+
+navigator.serviceWorker.register("service-worker.js");
+
+}
+
+</script>
+
+</body>
+
+</html>
